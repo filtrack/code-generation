@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starter.app.mapper.AricleMapper">
+
+    <resultMap id="BaseResultMap" type="com.starter.app.entity.Aricle">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="lId" column="l_id" jdbcType="BIGINT"/>
+        <result property="tId" column="t_id" jdbcType="BIGINT"/>
+        <result property="uId" column="u_id" jdbcType="BIGINT"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="subTitle" column="sub_title" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="keyword" column="keyword" jdbcType="VARCHAR"/>
+        <result property="readCount" column="read_count" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="deleteFlag" column="delete_flag" jdbcType="INTEGER"/>
+        <result property="version" column="version" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="all_cols">
+        id,l_id,t_id,u_id,title,sub_title,content,keyword,read_count,status,delete_flag,version,create_time,update_time
+    </sql>
+
+</mapper>
+
